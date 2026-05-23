@@ -42,10 +42,10 @@ writing a runbook for on call response.
 ## Project structure
 
 ```
-clusterguard/
+ClusterGuard/
 ├── cmd/
-│   └── clusterguard/
-│       └── main.go          # entrypoint, flag parsing, signal handling
+│ └── main.go  # entrypoint, flag parsing, signal handling
+│        
 ├── internal/
 │   ├── consumer/
 │   │   ├── kafka.go         # Kafka consumer group using confluent-kafka-go
