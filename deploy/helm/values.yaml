@@ -1,0 +1,41 @@
+replicaCount: 2
+
+image:
+  repository: ghcr.io/aryanmehta/clusterguard
+  tag: latest
+  pullPolicy: IfNotPresent
+
+kafka:
+  brokers: "kafka:9092"
+  topic: "ops.events"
+  group: "clusterguard"
+
+detector:
+  windowSize: 100
+  zscoreThreshold: 3.0
+
+webhook:
+  url: ""   # set via --set webhook.url=... or a sealed secret
+
+metrics:
+  port: 9090
+  serviceMonitor:
+    enabled: false   # set true if Prometheus Operator is installed
+
+resources:
+  requests:
+    cpu: "100m"
+    memory: "128Mi"
+  limits:
+    cpu: "500m"
+    memory: "256Mi"
+
+readinessProbe:
+  initialDelaySeconds: 15
+  periodSeconds: 10
+  failureThreshold: 3
+
+livenessProbe:
+  initialDelaySeconds: 30
+  periodSeconds: 20
+  failureThreshold: 5
