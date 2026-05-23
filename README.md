@@ -47,9 +47,6 @@ ClusterGuard/
 │ └── main.go  # entrypoint, flag parsing, signal handling
 │        
 ├── internal/
-│   ├── consumer/
-│   │   ├── kafka.go         # Kafka consumer group using confluent-kafka-go
-│   │   └── kafka_test.go
 │   ├── detector/
 │   │   ├── anomaly.go       # sliding-window z-score detector
 │   │   └── anomaly_test.go
@@ -61,27 +58,17 @@ ClusterGuard/
 │   ├── k8s/
 │   │   ├── deployment.yaml
 │   │   ├── service.yaml
-│   │   └── configmap.yaml
+│   │   
 │   └── helm/
-│       └── clusterguard/
-│           ├── Chart.yaml
-│           ├── values.yaml
-│           └── templates/
-│               ├── deployment.yaml
-│               ├── service.yaml
-│               └── configmap.yaml
-├── terraform/
-│   ├── main.tf
-│   ├── variables.tf
-│   └── outputs.tf
+│       ├── Chart.yaml
+│       ├── values.yaml
+│        
 ├── .github/
 │   └── workflows/
 │       ├── ci.yaml
-│       └── terraform-plan.yaml
 ├── docs/
 │   └── runbook.md
 ├── go.mod
-├── go.sum
 └── README.md
 ```
 
@@ -99,7 +86,7 @@ ClusterGuard/
 ### Run locally
 
 ```bash
-git clone https://github.com/aryanmehta/ClusterGuard
+git clone https://github.com/RiyaJ6/ClusterGuard
 cd ClusterGuard
 
 # start a local kafka
