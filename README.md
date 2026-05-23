@@ -43,9 +43,21 @@ writing a runbook for on call response.
 
 ```
 ClusterGuard/
+├── .github/
+│   └── workflows/
+│       ├── CI.yaml
 ├── cmd/
 │ └── main.go  # entrypoint, flag parsing, signal handling
-│        
+│├── deploy/
+│   ├── k8s/
+│   │   ├── deployment.yaml
+│   │   ├── service.yaml
+│   │   
+│   └── helm/
+│       ├── Chart.yaml
+│       ├── values.yaml
+├── docs/
+│   └── runbook.md
 ├── internal/
 │   ├── detector/
 │   │   ├── anomaly.go       # sliding-window z-score detector
@@ -54,18 +66,6 @@ ClusterGuard/
 │   │   └── prometheus.go    # Prometheus counters, histograms, gauges
 │   └── webhook/
 │       └── alert.go         # HTTP POST to configurable alert endpoint
-├── deploy/
-│   ├── k8s/
-│   │   ├── deployment.yaml
-│   │   ├── service.yaml
-│   │   
-│   └── helm/
-│       ├── Chart.yaml
-│       ├── values.yaml
-│        
-├── .github/
-│   └── workflows/
-│       ├── ci.yaml
 ├── docs/
 │   └── runbook.md
 ├── go.mod
