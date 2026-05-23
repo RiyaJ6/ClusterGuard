@@ -1,0 +1,6 @@
+apiVersion: v2
+name: clusterguard
+description: Real-time fault detection on Kubernetes using sliding-window anomaly detection
+type: application
+version: 0.1.0
+appVersion: "0.1.0"
