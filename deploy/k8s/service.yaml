@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: clusterguard
+  labels:
+    app: clusterguard
+spec:
+  selector:
+    app: clusterguard
+  ports:
+    - name: metrics
+      port: 9090
+      targetPort: 9090
+  type: ClusterIP
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: clusterguard-config
+data:
+  kafka_brokers: "kafka:9092"
+  kafka_topic: "ops.events"
+  window_size: "100"
+  zscore_threshold: "3.0"
+  metrics_port: "9090"
+  log_level: "info"
