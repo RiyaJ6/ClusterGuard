@@ -66,8 +66,6 @@ ClusterGuard/
 │   │   └── prometheus.go    # Prometheus counters, histograms, gauges
 │   └── webhook/
 │       └── alert.go         # HTTP POST to configurable alert endpoint
-├── docs/
-│   └── runbook.md
 ├── go.mod
 └── README.md
 ```
