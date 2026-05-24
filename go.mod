@@ -1,4 +1,4 @@
-module github.com/RiyaJ6/clusterguard
+module github.com/RiyaJ6/ClusterGuard
 
 go 1.22
 
