@@ -11,10 +11,10 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/aryanmehta/clusterguard/internal/consumer"
-	"github.com/aryanmehta/clusterguard/internal/detector"
-	"github.com/aryanmehta/clusterguard/internal/metrics"
-	"github.com/aryanmehta/clusterguard/internal/webhook"
+	"github.com/RiyaJ6/ClusterGuard/internal"
+	"github.com/RiyaJ6/ClusterGuard/internal/detector"
+	"github.com/RiyaJ6/ClusterGuard/internal/metrics"
+	"github.com/RiyaJ6/ClusterGuard/internal/webhook"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
