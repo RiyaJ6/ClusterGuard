@@ -51,7 +51,7 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Build image
-        run: docker build -t clusterguard:ci .
+        run: docker build -t ClusterGuard:CI .
 
       - name: Scan for vulnerabilities
         uses: aquasecurity/trivy-action@master
