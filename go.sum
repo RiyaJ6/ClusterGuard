@@ -13,7 +13,7 @@ github.com/prometheus/client_model v0.5.1-0.20231231150433-edd926fafdb2/go.mod h
 github.com/prometheus/common v0.48.0 h1:QO8U2CdOzSn1BBsmXJXduaaW+dY/5QLjfB8svtSzKKE=
 github.com/prometheus/common v0.48.0/go.mod h1:0/KsvlIEfPQCQ5I2iNSAWKPZziNCvRs5EC6ILDTlAPc=
 github.com/prometheus/procfs v0.12.0 h1:jluTpSng7V9hY0O2R9DzzJHYb2xULk9VTR1V1R/k6Bo=
-github.com/prometheus/procfs v0.12.0/go.mod h1:pcuDEFsWzvNgdQesW0On3eG3eNDnWilPHQfvJPhlab=
+github.com/prometheus/procfs v0.12.0/go.mod h1:pcuDEFsWDnvcgNzo4EEweacyhjeA9Zk3cnaOZAZEfOo=
 golang.org/x/sys v0.16.0 h1:xWaGoLVH/wsSgqBpstnakGrp23ZsK8/y4HOLCXVQ78=
 golang.org/x/sys v0.16.0/go.mod h1:/VUhepP7/wJqI9UVN4kqNUaIW6KV8qdsTruZL+fast=
 google.golang.org/protobuf v1.32.0 h1:pPC6BG5ex8PDFnkbrGU3EixyhKcGbRxLeWxpPR90nJ=
