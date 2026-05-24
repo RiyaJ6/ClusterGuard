@@ -16,6 +16,6 @@ github.com/prometheus/procfs v0.12.0 h1:jluTpSng7V9hY0O2R9DzzJHYb2xULk9VTR1V1R/k
 github.com/prometheus/procfs v0.12.0/go.mod h1:pcuDEFsWDnvcgNzo4EEweacyhjeA9Zk3cnaOZAZEfOo=
 golang.org/x/sys v0.16.0 h1:xWaGoLVH/wsSgqBpstnakGrp23ZsK8/y4HOLCXVQ78=
 golang.org/x/sys v0.16.0/go.mod h1:/VUhepP7/wJqI9UVN4kqNUaIW6KV8qdsTruZL+fast=
-google.golang.org/protobuf v1.32.0 h1:pPC6BG5ex8PDFnkbrGU3EixyhKcGbRxLeWxpPR90nJ=
+google.golang.org/protobuf v1.32.0 h1:pPC6BG5ex8PDFnkbrGU3EixyhKcQ2aDuBS36lqK/C7I=
 google.golang.org/protobuf v1.32.0/go.mod h1:c6P6GXX6sHbq/GqG4yIMOb0uIUTW1efJmZcaQRQcPC=
 
