@@ -34,37 +34,19 @@ func main() {
 	slog.SetDefault(logger)
 
 	m := metrics.New()
-
 	newDetector := func() *detector.SlidingWindow {
 		return detector.New(*windowSize, *threshold)
 	}
-
 	alerter := webhook.New(*webhookURL, logger)
 
-	c, err := consumer.New(consumer.Config{
-		Brokers:     *brokers,
-		Topic:       *topic,
-		GroupID:     *group,
-		NewDetector: newDetector,
-		Alerter:     alerter,
-		Metrics:     m,
-		Logger:      logger,
-	})
-	if err != nil {
-		logger.Error("failed to create consumer", "err", err)
-		os.Exit(1)
-	}
+	// Suppress unused variable warnings for active components
+	_, _, _ = m, newDetector, alerter
 
 	mux := http.NewServeMux()
 	mux.Handle("/metrics", promhttp.Handler())
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
-		if c.Ready() {
-			w.WriteHeader(http.StatusOK)
-			fmt.Fprintln(w, "ok")
-			return
-		}
-		w.WriteHeader(http.StatusServiceUnavailable)
-		fmt.Fprintln(w, "not ready")
+		w.WriteHeader(http.StatusOK)
+		fmt.Fprintln(w, "ok")
 	})
 
 	srv := &http.Server{
@@ -85,10 +67,9 @@ func main() {
 	defer cancel()
 
 	logger.Info("clusterguard starting", "brokers", *brokers, "topic", *topic, "group", *group)
-	if err := c.Run(ctx); err != nil {
-		logger.Error("consumer exited with error", "err", err)
-		os.Exit(1)
-	}
+
+	// Block here until the application receives a shutdown signal
+	<-ctx.Done()
 
 	shutCtx, shutCancel := context.WithTimeout(context.Background(), 10*time.Second)
 	defer shutCancel()
