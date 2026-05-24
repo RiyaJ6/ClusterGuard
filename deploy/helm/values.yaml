@@ -8,7 +8,7 @@ image:
 kafka:
   brokers: "kafka:9092"
   topic: "ops.events"
-  group: "clusterguard"
+  group: "ClusterGuard"
 
 detector:
   windowSize: 100
