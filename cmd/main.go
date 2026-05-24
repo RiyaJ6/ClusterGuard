@@ -11,11 +11,11 @@ import (
 	"syscall"
 	"time"
 
-	"://github.com"
-	"://github.com"
-	"://github.com"
-	"://github.com"
-	"://github.com"
+	"github.com/RiyaJ6/ClusterGuard/internal/detector"
+	"github.com/RiyaJ6/ClusterGuard/internal/metrics"
+	"github.com/RiyaJ6/ClusterGuard/internal/webhook"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
+
 )
 
 func main() {
