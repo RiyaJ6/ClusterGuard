@@ -41,9 +41,9 @@ jobs:
           go-version: "1.22"
 
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v4
+        uses: golangci/golangci-lint-action@v6
         with:
-          version: latest
+          args: ./...
 
   build:
     name: Build Docker image
