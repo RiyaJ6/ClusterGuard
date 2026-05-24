@@ -66,10 +66,10 @@ ClusterGuard/
 │   │   └── prometheus.go    # Prometheus counters, histograms, gauges
 │   └── webhook/
 │       └── alert.go  # HTTP POST to configurable alert endpoint
-|── doc.go      
-├── go.mod
-|── go.sum
-└── README.md
+|── README.md      
+├── doc.go
+|── go.mod
+└── go.sum
 ```
 
 ---
