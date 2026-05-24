@@ -32,6 +32,13 @@ jobs:
         with:
           go-version: "1.22"
           cache: false
+
+      - name: Download dependencies
+        run: go mod download
+
+      # 2. Run tidy to ensure everything matches exactly
+      - name: Tidy modules
+        run: go mod tidy
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v6
         with:
