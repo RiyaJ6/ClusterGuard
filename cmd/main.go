@@ -21,7 +21,7 @@ import (
 func main() {
 	brokers := flag.String("brokers", envOr("KAFKA_BROKERS", "localhost:9092"), "Kafka broker list")
 	topic := flag.String("topic", envOr("KAFKA_TOPIC", "ops.events"), "Kafka topic")
-	group := flag.String("group", envOr("KAFKA_GROUP", "clusterguard"), "Consumer group ID")
+	group := flag.String("group", envOr("KAFKA_GROUP", "ClusterGuard"), "Consumer group ID")
 	windowSize := flag.Int("window-size", 100, "Sliding window size for anomaly detection")
 	threshold := flag.Float64("threshold", 3.0, "Z-score threshold")
 	webhookURL := flag.String("webhook-url", envOr("WEBHOOK_URL", ""), "Alert webhook endpoint")
