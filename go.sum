@@ -1,4 +1,4 @@
-github.com/beorn7/perks v1.0.1 h1:VlbKKohWdbtj45qwYvQW0B+UV0G2N8kvtlkdS2UjcQ=
+github.com/beorn7/perks v1.0.1 h1:VlbKKnNfV8bJzeqoa4cOKqO6bYr3WgKZxO8Z16+hsOM=
 github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU36Q+wycpsxpgJKE0o9V+/ZBPIlzcH6xY64w=
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2jUQyna7yntqwzLRu+422nabdul5c6G7oY9tG4s7Y=
 github.com/cespare/xxhash/v2 v2.2.0/go.mod h1:VGX0DQ3Q6Gist3dZRbv3+qMEqVQcEMnwMstsuHbVAU=
