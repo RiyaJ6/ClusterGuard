@@ -6,7 +6,7 @@ github.com/confluentinc/confluent-kafka-go/v2 v2.3.0 h1:ygXvpU1AoN1MhdzckN+PyD9Q
 github.com/confluentinc/confluent-kafka-go/v2 v2.3.0/go.mod h1:/VTy8iEpe6mD9pkCH5BhijlUl8ulUXymKv1Qig5Rgb8=
 github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 h1:jWpV7xVxU9u6DLAMYJbtSK8+Y07DGOJC2r/DFS+mWA=
 github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0/go.mod h1:QUyp042oQthUoa9bqPzF0Fa9w51HnqHQaIeZ13a0TS=
-github.com/prometheus/client_golang v1.19.0 h1:ygXvpU1AoN4SODl91BgyEY72BW+11AuNajCIqsKG+o=
+github.com/prometheus/client_golang v1.19.0 h1:ygXvpU1AoN1MhdzckN+PyD9QJOSD4x7kmXYlnfbA6JU=
 github.com/prometheus/client_golang v1.19.0/go.mod h1:ZRM9uEAypZakd+q/x7+gmsvXdURP+DABIEIjnmDdp+k=
 github.com/prometheus/client_model v0.5.1-0.20231231150433-edd926fafdb2 h1:+PnIW5+qJuNcfOU673gmpvSJt/vr9mHEOIknA/4XyY=
 github.com/prometheus/client_model v0.5.1-0.20231231150433-edd926fafdb2/go.mod h1:Xwvn7oP7O60zT9UltjYQKPtKEv7hzVrgRIsR00r8Zc=
