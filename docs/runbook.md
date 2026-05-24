@@ -23,13 +23,13 @@ The dashboard has four panels:
 
 ### `ClusterGuardAnomalyRateHigh`
 
-**Condition:** `rate(clusterguard_anomalies_detected_total[5m]) > 10`
+**Condition:** `rate(ClusterGuard_anomalies_detected_total[5m]) > 10`
 **Severity:** warning
 **Meaning:** More than 10 anomalies per second in the last 5 minutes.
 This can be a genuine signal spike or a detector misconfiguration.
 
 **Steps:**
-1. Check the structured logs: `kubectl logs -l app=clusterguard --since=10m | jq 'select(.anomaly==true)'`
+1. Check the structured logs: `kubectl logs -l app=ClusterGuard --since=10m | jq 'select(.anomaly==true)'`
 2. Look at the `score` and `z_score` fields — are these plausibly anomalous events or noise?
 3. If noise: increase `ZSCORE_THRESHOLD` in the ConfigMap and roll the deployment.
 4. If genuine: check the upstream data source for an incident.
@@ -38,12 +38,12 @@ This can be a genuine signal spike or a detector misconfiguration.
 
 ### `ClusterGuardConsumerLagHigh`
 
-**Condition:** `clusterguard_consumer_lag > 50000`
+**Condition:** `ClusterGuard_consumer_lag > 50000`
 **Severity:** warning
 **Meaning:** The consumer is significantly behind the producer.
 
 **Steps:**
-1. `kubectl top pod -l app=clusterguard` — check CPU and memory.
+1. `kubectl top pod -l app=ClusterGuard` — check CPU and memory.
 2. If OOMKilled: `kubectl describe pod <pod>` — check `Last State` for OOMKill reason.
    Increase memory limit in `values.yaml` and redeploy.
 3. If CPU throttled: increase CPU limit or add a replica.
@@ -53,7 +53,7 @@ This can be a genuine signal spike or a detector misconfiguration.
 
 ### `ClusterGuardWebhookErrorsHigh`
 
-**Condition:** `rate(clusterguard_webhook_errors_total[5m]) > 1`
+**Condition:** `rate(ClusterGuard_webhook_errors_total[5m]) > 1`
 **Severity:** warning
 **Meaning:** Alert deliveries are failing.
 
@@ -67,7 +67,7 @@ This can be a genuine signal spike or a detector misconfiguration.
 
 ## Debugging pod restarts
 
-If you see `kubectl get pods -l app=clusterguard` showing a non-zero RESTARTS count:
+If you see `kubectl get pods -l app=ClusterGuard` showing a non-zero RESTARTS count:
 
 ```bash
 # see why the pod last terminated
