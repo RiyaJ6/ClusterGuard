@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: clusterguard
+  name: ClusterGuard
   labels:
-    app: clusterguard
+    app: ClusterGuard
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: clusterguard
+      app: ClusterGuard
   template:
     metadata:
       labels:
-        app: clusterguard
+        app: ClusterGuard
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "9090"
         prometheus.io/path: "/metrics"
     spec:
       containers:
-        - name: clusterguard
-          image: ghcr.io/aryanmehta/clusterguard:latest
+        - name: ClusterGuard
+          image: ghcr.io/RiyaJ6/ClusterGuard:latest
           ports:
             - name: metrics
               containerPort: 9090
@@ -28,19 +28,19 @@ spec:
             - name: KAFKA_BROKERS
               valueFrom:
                 configMapKeyRef:
-                  name: clusterguard-config
+                  name: ClusterGuard-config
                   key: kafka_brokers
             - name: KAFKA_TOPIC
               valueFrom:
                 configMapKeyRef:
-                  name: clusterguard-config
+                  name: ClusterGuard-config
                   key: kafka_topic
             - name: KAFKA_GROUP
-              value: clusterguard
+              value: ClusterGuard
             - name: WEBHOOK_URL
               valueFrom:
                 secretKeyRef:
-                  name: clusterguard-secrets
+                  name: ClusterGuard-secrets
                   key: webhook_url
                   optional: true
           resources:
