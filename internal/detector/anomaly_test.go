@@ -32,7 +32,7 @@ func TestSlidingWindow_DetectsSpike(t *testing.T) {
 func TestSlidingWindow_ZScoreAccuracy(t *testing.T) {
 	// With a window of [0, 2] mean=1, stddev=1
 	// A value of 4 should have z-score = |4-1|/1 = 3.0
-	sw := New(2, 2.5)
+	sw := New(3, 2.5)
 	sw.Score(0)
 	sw.Score(2)
 	z, anomaly := sw.Score(4)
