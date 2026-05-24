@@ -3,7 +3,7 @@ github.com/beorn7/perks v1.0.1/go.mod h1:G2ZrVWU36Q+wycpsxpgJKE0o9V+/ZBPIlzcH6xY
 github.com/cespare/xxhash/v2 v2.2.0 h1:DC2jUQyna7yntqwzLRu+422nabdul5c6G7oY9tG4s7Y=
 github.com/cespare/xxhash/v2 v2.2.0/go.mod h1:VGX0DQ3Q6Gist3dZRbv3+qMEqVQcEMnwMstsuHbVAU=
 github.com/confluentinc/confluent-kafka-go/v2 v2.3.0 h1:HyWxJ97DJNEOzNPrGX0B7G0k0M9uPGJnPIhSPjGVaQ=
-github.com/confluentinc/confluent-kafka-go/v2 v2.3.0/go.mod h1:pkwQzV1VH7gOlMOHXgHd5XQk0QSnMC7CHrKtCVMFHc=
+github.com/confluentinc/confluent-kafka-go/v2 v2.3.0/go.mod h1:/VTy8iEpe6mD9pkCH5BhijlUl8ulUXymKv1Qig5Rgb8=
 github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 h1:jWpV7xVxU9u6DLAMYJbtSK8+Y07DGOJC2r/DFS+mWA=
 github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0/go.mod h1:QUyp042oQthUoa9bqPzF0Fa9w51HnqHQaIeZ13a0TS=
 github.com/prometheus/client_golang v1.19.0 h1:ygXvpU1AoN4SODl91BgyEY72BW+11AuNajCIqsKG+o=
