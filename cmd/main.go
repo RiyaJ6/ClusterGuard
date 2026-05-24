@@ -11,7 +11,7 @@ import (
 	"syscall"
 	"time"
 
-    "://github.com"
+	"://github.com"
 	"github.com/RiyaJ6/ClusterGuard/internal/detector"
 	"github.com/RiyaJ6/ClusterGuard/internal/metrics"
 	"github.com/RiyaJ6/ClusterGuard/internal/webhook"
@@ -36,7 +36,6 @@ func main() {
 	// prometheus metrics
 	m := metrics.New()
 
-
 	newDetector := func() *detector.SlidingWindow {
 		return detector.New(*windowSize, *threshold)
 	}
@@ -59,7 +58,6 @@ func main() {
 		os.Exit(1)
 	}
 
-	
 	mux := http.NewServeMux()
 	mux.Handle("/metrics", promhttp.Handler())
 	mux.HandleFunc("/healthz", func(w http.ResponseWriter, r *http.Request) {
@@ -86,12 +84,10 @@ func main() {
 		}
 	}()
 
-	
 	ctx, cancel := signal.NotifyContext(context.Background(), syscall.SIGTERM, syscall.SIGINT)
 	defer cancel()
 
 	logger.Info("clusterguard starting", "brokers", *brokers, "topic", *topic, "group", *group)
-
 	if err := c.Run(ctx); err != nil {
 		logger.Error("consumer exited with error", "err", err)
 		os.Exit(1)
@@ -106,7 +102,6 @@ func main() {
 
 func envOr(key, fallback string) string {
 	if v := os.Getenv(key); v != "" {
-		return v
-	}
+		return v }
 	return fallback
 }
